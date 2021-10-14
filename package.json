@@ -1,0 +1,24 @@
+{
+  "name": "qiankun-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "install": "npm-run-all --serial install:*",
+    "install:main": "cd main && yarn install",
+    "install:app-first-vue": "cd app-first-vue && yarn install",
+    "install:app-second-vue": "cd app-second-vue && yarn install",
+    "start": "npm-run-all --parallel start:*",
+    "start:main": "cd main && yarn serve",
+    "start:app-first-vue": "cd app-first-vue && yarn serve",
+    "start:app-second-vue": "cd app-second-vue && yarn serve",
+    "build": "npm-run-all --serial build:*",
+    "build:main": "cd main && yarn build",
+    "build:app-first-vue": "cd app-first-vue && yarn build",
+    "build:app-second-vue": "cd app-second-vue && yarn build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
